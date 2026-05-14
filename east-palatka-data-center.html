@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>East Palatka Data Center | Lucid Era Investigations</title>
+  <meta name="description" content="Putnam County, FL: A high-value target for the hyperscale data center industry.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+</head>
+<body class="entity-invest">
+
+<!-- NAV — if you change this, update it in ALL pages -->
+<nav class="site-nav">
+  <div class="nav-brand">
+    <div class="nav-logo">
+      <img src="assets/images/lucid-era-investigations-logo.png" alt="Lucid Era Investigations logo" width="48" height="48">
+    </div>
+    <span class="nav-name">Lucid Era Investigations</span>
+  </div>
+  <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="investigations.html">Investigations</a></li>
+        <li><a href="technologies.html">Technologies</a></li>
+        <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<div class="article-hero">
+  <div class="container">
+    <div class="article-kicker">Investigative Report &bull; East Palatka, FL</div>
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;">
+      <span style="display:inline-block;background:rgba(29,158,117,0.12);border:1px solid var(--teal-700);color:var(--teal-400);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:2px;">Data Center</span>
+      <span style="display:inline-block;background:rgba(29,158,117,0.12);border:1px solid var(--teal-700);color:var(--teal-400);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:2px;">Public Resources</span>
+      <span style="display:inline-block;background:rgba(29,158,117,0.12);border:1px solid var(--teal-700);color:var(--teal-400);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:2px;">Putnam County</span>
+      <span style="display:inline-block;background:rgba(29,158,117,0.12);border:1px solid var(--teal-700);color:var(--teal-400);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:2px;">Utility Infrastructure</span>
+      <span style="display:inline-block;background:rgba(29,158,117,0.12);border:1px solid var(--teal-700);color:var(--teal-400);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:2px;">BOCC</span>
+    </div>
+    <h1>Putnam County, FL: A <em>High-Value Target</em> for the Hyperscale Data Center Industry</h1>
+    <p class="article-hero-sub">A 1,317-acre data center campus is being assembled in East Palatka. Public grant money is funding upgrades to the adjacent wastewater plant. Utility easement negotiations are underway. And the buyer has not yet been publicly identified.</p>
+    <div class="article-byline">
+      <span>By Lucid Era Media</span>
+      <span>Updated April 29, 2026</span>
+      <span>Case CASE-0003</span>
+      <span>Status: Active Investigation</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="container">
+    <a href="index.html" class="back-link">&#8592; All investigations</a>
+    <div class="article-content">
+
+      <p class="lead">Somewhere in the timberland bordering East Palatka, nine parcels of agricultural land are being assembled into the largest industrial site in Putnam County history. The seller is a publicly traded timber REIT. The broker is CBRE. The power infrastructure is already there. The wastewater plant next door is being upgraded with state grant money. And the buyer, whoever is about to bring 1,700 megawatts of hyperscale computing to one of Florida's poorest counties, has not been publicly identified.</p>
+
+      <h2>The site</h2>
+
+      <p>The property is located at 135 Gilbert Road, East Palatka, FL 32131, and spans nine parcels totaling 1,317 acres. It is being marketed by CBRE Data Center Solutions on behalf of Rayonier Inc., the Jacksonville-based timberland REIT, through its real estate subsidiary Raydient LLC.</p>
+
+      <div class="stat-grid">
+        <div class="stat-card"><div class="stat-value">1,317</div><div class="stat-label">Total acres, 9 parcels</div></div>
+        <div class="stat-card"><div class="stat-value">1,700 MW</div><div class="stat-label">Planned capacity</div></div>
+        <div class="stat-card amber"><div class="stat-value">525</div><div class="stat-label">Usable upland acres</div></div>
+        <div class="stat-card coral"><div class="stat-value">~45</div><div class="stat-label">Permanent jobs projected</div></div>
+      </div>
+
+      <p>The conceptual development plan calls for 15 data center buildings at approximately 100 megawatts each, arranged across two development pods. Of the 1,317 total acres, only 525 are usable upland. The remaining 792 acres are wetlands and buffer zones, land that will be permanently rezoned from agricultural use to accommodate what CBRE's marketing describes as a "hyperscale-ready" campus.</p>
+
+      <p>At full buildout, 1,700 megawatts represents roughly 2.5 times the combined residential electricity demand of all of Putnam County.</p>
+
+      <div class="chart-panel">
+        <div class="chart-panel-title">Site land classification by acre</div>
+        <div style="position:relative;width:100%;max-width:380px;height:260px;margin:0 auto;">
+          <canvas id="landChart"></canvas>
+        </div>
+        <div style="display:flex;justify-content:center;gap:2rem;margin-top:1rem;">
+          <span style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--teal-200);"><span style="width:10px;height:10px;border-radius:2px;background:#5DCAA5;display:inline-block;"></span>Usable upland</span>
+          <span style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--teal-200);"><span style="width:10px;height:10px;border-radius:2px;background:#243729;border:1px solid #2E4533;display:inline-block;"></span>Wetland and buffer</span>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>The nine parcels</strong>
+        <div style="background:var(--slate-900);border-radius:4px;padding:1.5rem;margin:1rem 0 0.5rem;font-family:'DM Sans',monospace;font-size:0.875rem;line-height:2;color:var(--teal-200);overflow-x:auto;">
+          <span style="color:var(--amber-400);">15-10-27-0000-0021-0000</span>  <span style="color:var(--teal-400);">224.15 ac</span><br>
+          <span style="color:var(--amber-400);">15-10-27-0000-0030-0000</span>  <span style="color:var(--teal-400);">20.00 ac</span><br>
+          <span style="color:var(--amber-400);">15-10-27-0000-0020-0000</span>  <span style="color:var(--teal-400);">80.56 ac</span><br>
+          <span style="color:var(--amber-400);">14-10-27-0000-0010-0010</span>  <span style="color:var(--teal-400);">119.17 ac</span><br>
+          <span style="color:var(--amber-400);">22-10-27-0000-0010-0000</span>  <span style="color:var(--teal-400);">567.13 ac</span>  <span style="color:var(--slate-200);font-size:0.75rem;">&larr; largest parcel</span><br>
+          <span style="color:var(--amber-400);">23-10-27-0000-0010-0010</span>  <span style="color:var(--teal-400);">145.02 ac</span><br>
+          <span style="color:var(--amber-400);">15-10-27-0000-0180-0000</span>  <span style="color:var(--teal-400);">1.00 ac</span><br>
+          <span style="color:var(--amber-400);">26-10-27-0000-0010-0011</span>  <span style="color:var(--teal-400);">38.18 ac</span><br>
+          <span style="color:var(--amber-400);">27-10-27-0000-0020-0010</span>  <span style="color:var(--teal-400);">121.82 ac</span>
+        </div>
+        <p style="font-size:0.8rem;color:var(--teal-700);margin-top:0.5rem;margin-bottom:0;">Putnam County parcel IDs. Current ownership can be verified at <a href="https://pa.putnam-fl.com" style="color:var(--teal-600);">pa.putnam-fl.com</a>. Any deed transfer after this publication date signals the buyer has closed.</p>
+      </div>
+
+      <h2>Power infrastructure already in place</h2>
+
+      <p>The site's appeal to data center developers is not accidental. Three Florida Power &amp; Light transmission lines already cross the property: a 500 kV double circuit, a 230 kV double circuit, and a 115 kV single circuit. Within approximately one mile sit four FPL transmission substations and two Kinder Morgan natural gas pipelines.</p>
+
+      <p>FPL has confirmed a minimum of 400 megawatts of available power at the site. A third-party power flow study completed in 2025 found 1.4 gigawatts of total capacity achievable with minimal system upgrades. FPL is also constructing a 200-megawatt Battery Energy Storage Center at the site of the former Putnam Power Plant, approximately one mile away, with completion expected in early 2027.</p>
+
+      <p>A site this power-ready in a rural county does not exist by coincidence. It was made this way by decades of FPL infrastructure investment, investment that now makes Putnam County land among the most attractive data center real estate in Florida.</p>
+
+      <div class="chart-panel">
+        <div class="chart-panel-title">Power capacity breakdown (megawatts)</div>
+        <div style="position:relative;width:100%;height:240px;">
+          <canvas id="powerChart"></canvas>
+        </div>
+      </div>
+
+      <h2>The wastewater plant next door</h2>
+
+      <p>The CBRE marketing brochure notes, almost in passing, that water and sewer easements for the site are "in process." That single phrase describes an active negotiation between Putnam County and the data center's principals over utility access. It also points directly to the facility sitting on the other side of the property line: the Putnam County Wastewater Treatment Plant on Gilbert Road.</p>
+
+      <p>On January 7, 2026, months before any public announcement of the data center project, the Putnam County Board of County Commissioners solicited bids for <strong>Bid 26-05: the Gilbert Road WWTF Efficiency Upgrade Project.</strong></p>
+
+      <div class="section-label">What the upgrade does</div>
+
+      <p>Bid 26-05 replaces the plant's existing centrifugal aeration blowers with high-efficiency turbo blowers, installs variable frequency drives (VFDs) on all blower motors, adds dissolved oxygen (DO) probes with SCADA integration, and upgrades monitoring at six remote lift stations. The project is funded by Florida Department of Agriculture and Consumer Services Grant Agreement No. 32780 and a St. Johns River Water Management District cost-share program.</p>
+
+      <p>These are not routine maintenance improvements. Precision dissolved oxygen control with SCADA-integrated VFDs is the technical foundation for producing reclaimed water: treated wastewater clean enough for industrial cooling systems. This is exactly the treatment quality that hyperscale data centers in Northern Virginia use through what the industry calls "purple pipe" systems: treated effluent piped directly to data center cooling towers, dramatically reducing freshwater consumption and creating a closed-loop water cycle with the treatment plant.</p>
+
+      <div class="callout">
+        <strong>Industry precedent: data centers co-locate with treatment plants by design</strong><br><br>
+        <p>Project finance legal analysis confirms that data centers should be co-located where possible with existing water facilities, such as wastewater treatment plants, because municipal water treatment plants often maintain redundancy in their utility networks to ensure consistent service.</p>
+        <p>In Loudoun County, Virginia, home to the world's largest concentration of data centers, local utility Loudoun Water built out a reclaimed water program specifically to serve data center cooling demand. Amazon became the first operator approved to use reclaimed water with direct evaporative cooling technology through that program. The Gilbert Road WWTF upgrade installs the same class of precision treatment controls that enable reclaimed water production.</p>
+      </div>
+
+      <div class="section-label">The expansion: $9.5 million in state money</div>
+
+      <p>Parallel to Bid 26-05, Putnam County has initiated <strong>RFQ 26-02</strong>, a solicitation for engineering services to design and permit an expansion of the Gilbert Road plant. The expansion adds 0.15 million gallons per day of treatment capacity, new sprayfields, and wet weather ponds.</p>
+
+      <p>The county submitted a <strong>Local Funding Initiative Request to the Florida Senate for FY2025-26</strong>, document S2558, requesting $9.5 million in state funding for the expansion. That request is a public record, filed at the Florida Legislature's website.</p>
+
+      <p>The stated rationale for both the upgrade and the expansion is to serve "a growing service area" and attract "commercial and industrial investment" to East Palatka. Putnam County is a Rural Economic Development Initiative (REDI) community with a flat or declining population and a limited tax base. There is no residential or agricultural demand growth in East Palatka that would justify a $9.5 million treatment plant expansion and a high-precision efficiency upgrade secured through a state grant.</p>
+
+      <p>The only credible demand driver is the data center.</p>
+
+      <div class="callout warning">
+        <strong>Public money used to prepare private infrastructure (Verified)</strong><br><br>
+        <p>FDACS Grant No. 32780 is a state grant funded by Florida taxpayers. The SJRWMD cost-share is a regional water management district contribution. The $9.5 million S2558 request is a direct ask to the Florida Senate. These are public funds being used to upgrade and expand the utility infrastructure that will serve a private hyperscale data center whose buyer has not been publicly identified.</p>
+        <p style="margin-bottom:0;">The WWTF upgrade and the easement negotiation are not independent county infrastructure decisions. They are the utility backbone of a private real estate transaction, paid for in part by Florida taxpayers.</p>
+        <p style="font-size:0.8rem;color:var(--amber-600);margin-top:0.75rem;margin-bottom:0;"><em>Sources: FDACS Grant 32780 records &bull; FL Senate S2558 &bull; Putnam County Bid 26-05 specs &bull; CBRE listing brochure</em></p>
+      </div>
+
+      <div class="water-split">
+        <div>
+          <h2>Impact on the Florida aquifer</h2>
+          <p>Hyperscale data centers require enormous volumes of water for cooling. The site's proximity to the Putnam County Wastewater Treatment Plant enables direct utility connections, but the net loss through evaporative cooling towers is largely unrecoverable. For East Palatka residents reliant on wells, this concentrated industrial draw increases the risk of aquifer drawdown, saltwater intrusion, and long-term water level decline.</p>
+        </div>
+        <div class="water-feature">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal-400);margin-bottom:0.5rem;">Daily consumption estimate</div>
+          <div class="water-number">1.5 - 3.0</div>
+          <div class="water-unit">Million Gallons Per Day</div>
+          <p class="water-note">Evaporation means the majority never returns to the water table.</p>
+        </div>
+      </div>
+
+      <h2>The critical timeline</h2>
+
+      <div style="margin:1.5rem 0 2rem;position:relative;padding-left:2rem;">
+        <div style="position:absolute;left:7px;top:0;bottom:0;width:1px;background:var(--teal-600);"></div>
+
+        <div style="position:relative;margin-bottom:1.5rem;">
+          <div style="position:absolute;left:-1.6rem;top:6px;width:8px;height:8px;border-radius:50%;background:var(--teal-600);border:2px solid var(--paper);"></div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;color:var(--teal-600);margin-bottom:0.25rem;">2024 &ndash; EARLY 2025</div>
+          <div style="font-size:0.9rem;color:#2E3B35;line-height:1.5;">Putnam County prepares and submits <strong>FL Senate Local Funding Initiative Request S2558</strong> requesting $9.5 million for WWTF expansion. Demand justification unknown pending FDACS grant application review.</div>
+        </div>
+
+        <div style="position:relative;margin-bottom:1.5rem;">
+          <div style="position:absolute;left:-1.6rem;top:6px;width:8px;height:8px;border-radius:50%;background:var(--teal-600);border:2px solid var(--paper);"></div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;color:var(--teal-600);margin-bottom:0.25rem;">JANUARY 7, 2026</div>
+          <div style="font-size:0.9rem;color:#2E3B35;line-height:1.5;">BOCC solicits <strong>Bid 26-05</strong> (WWTF efficiency upgrade). Funded through FDACS Grant No. 32780. Sealed bids due February 9.</div>
+        </div>
+
+        <div style="position:relative;margin-bottom:1.5rem;">
+          <div style="position:absolute;left:-1.6rem;top:6px;width:8px;height:8px;border-radius:50%;background:var(--teal-600);border:2px solid var(--paper);"></div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;color:var(--teal-600);margin-bottom:0.25rem;">JANUARY 2026</div>
+          <div style="font-size:0.9rem;color:#2E3B35;line-height:1.5;">CBRE data center marketing materials describe <strong>water and sewer easements as "in process"</strong>; county is in active negotiation with the data center proponent over utility access.</div>
+        </div>
+
+        <div style="position:relative;margin-bottom:1.5rem;">
+          <div style="position:absolute;left:-1.6rem;top:6px;width:8px;height:8px;border-radius:50%;background:var(--teal-600);border:2px solid var(--paper);"></div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;color:var(--teal-600);margin-bottom:0.25rem;">FEBRUARY 16, 2026</div>
+          <div style="font-size:0.9rem;color:#2E3B35;line-height:1.5;">Bid 26-05 enters technical evaluation phase. Award pending board approval.</div>
+        </div>
+
+        <div style="position:relative;margin-bottom:1.5rem;">
+          <div style="position:absolute;left:-1.6rem;top:6px;width:8px;height:8px;border-radius:50%;background:var(--teal-600);border:2px solid var(--paper);"></div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;color:var(--teal-600);margin-bottom:0.25rem;">ONGOING (2026)</div>
+          <div style="font-size:0.9rem;color:#2E3B35;line-height:1.5;"><strong>RFQ 26-02</strong> solicits engineering services for 0.15 MGD plant expansion with new sprayfields. Estimated project cost: $9.5 million.</div>
+        </div>
+
+        <div style="position:relative;margin-bottom:1.5rem;">
+          <div style="position:absolute;left:-1.6rem;top:6px;width:8px;height:8px;border-radius:50%;background:var(--teal-600);border:2px solid var(--paper);"></div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;color:var(--teal-600);margin-bottom:0.25rem;">APRIL 2026</div>
+          <div style="font-size:0.9rem;color:#2E3B35;line-height:1.5;">Data center listing remains active. <strong>Buyer not publicly identified.</strong> No PUD application filed with the BOCC as of this publication date.</div>
+        </div>
+
+        <div style="position:relative;margin-bottom:0;">
+          <div style="position:absolute;left:-1.6rem;top:6px;width:8px;height:8px;border-radius:50%;background:var(--amber-400);border:2px solid var(--paper);"></div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;color:var(--amber-400);margin-bottom:0.25rem;">Q1 2027 (PROJECTED)</div>
+          <div style="font-size:0.9rem;color:#2E3B35;line-height:1.5;">FPL Battery Energy Storage Center at former Putnam Power Plant site (~1 mile from Gilbert Road) expected to come online.</div>
+        </div>
+      </div>
+
+      <div class="callout warning">
+        <strong>Key unanswered question</strong><br><br>
+        <p style="margin-bottom:0;">At what point did Putnam County officials know a hyperscale data center was being planned for the Gilbert Road site? If the FDACS grant application or the S2558 Senate request were prepared with knowledge of the data center deal, Florida taxpayers funded utility infrastructure for a private transaction under the cover of rural development grants. This question can be answered through public records requests under Chapter 119, Florida Statutes. Lucid Era Investigations has filed requests for those records.</p>
+      </div>
+
+      <h2>What Putnam County gets and what it gives up</h2>
+
+      <div class="balance-grid">
+        <div class="balance-card gains">
+          <h3>What the county gets</h3>
+          <ul class="balance-list">
+            <li><span class="dot"></span>~850 temporary construction jobs</li>
+            <li><span class="dot"></span>Property tax increase on land value</li>
+            <li><span class="dot"></span>FPL infrastructure investment</li>
+            <li><span class="dot"></span>Easement fees (terms undisclosed)</li>
+          </ul>
+        </div>
+        <div class="balance-card costs">
+          <h3>What the county gives up</h3>
+          <ul class="balance-list">
+            <li><span class="dot"></span>~30-50 permanent positions for a 1,317-acre site</li>
+            <li><span class="dot"></span>Hardware and energy exempt under FL HB 7031; long-term tax contribution reduced</li>
+            <li><span class="dot"></span>1.5-3 million gallons per day drawn from Floridan Aquifer; mostly non-recoverable</li>
+            <li><span class="dot"></span>Grid upgrade costs redistributed to residential and small business ratepayers</li>
+            <li><span class="dot"></span>1,317 acres permanently rezoned from agricultural; 792 acres of wetland buffer functionally retired</li>
+            <li><span class="dot"></span>FDACS grant + SJRWMD cost-share + $9.5M state request: public costs for private infrastructure</li>
+            <li><span class="dot"></span>Utility rate increases as infrastructure capital costs passed to residents</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>Florida HB 7031 provides data centers meeting the 100 MW and $150 million investment thresholds with a sales tax exemption on construction materials, equipment, and electricity used at the facility. The East Palatka site, planned at 1,700 MW, would qualify easily. Once those exemptions activate, the taxable contribution to Putnam County from the operating facility is substantially reduced. The land value increases; the infrastructure producing the economic activity is shielded from local taxation.</p>
+
+      <div class="chart-panel">
+        <div class="chart-panel-title">Employment: construction phase vs. permanent headcount</div>
+        <div style="position:relative;width:100%;height:150px;">
+          <canvas id="jobsChart"></canvas>
+        </div>
+      </div>
+
+      <h2>The entitlement bottleneck: the BOCC</h2>
+
+      <p>No construction can begin without a Planned Unit Development (PUD) rezoning vote by the Putnam County Board of County Commissioners. The current zoning is Agricultural (AC). The CBRE materials estimate a 4 to 6 month entitlement timeline, a figure that implies either substantial pre-application conversations with county planning staff have already taken place, or that the broker has a high-confidence read on BOCC receptivity.</p>
+
+      <p>The same five commissioners who will vote on the PUD also initiated Bid 26-05 and approved the S2558 state funding request. Under Florida law (F.S. 112.3143), any commissioner with a financial relationship with Rayonier, CBRE, FPL, or the undisclosed buyer is required to file a voting conflict disclosure and abstain from any vote on the PUD application. Financial disclosures for all five commissioners are public records at the Florida Commission on Ethics website.</p>
+
+      <h2>What we're still looking for</h2>
+
+      <div class="metric-row">
+        <div class="metric-card"><h4>01. The buyer</h4><p>The buyer has not been publicly named. The Google SOL submarine cable landing station in Flagler Beach (33 miles away, RFS Q1 2027) is prominently cited in CBRE's marketing materials. Google is a known hyperscale operator expanding in the Southeast. Other candidates include Microsoft, Amazon Web Services, Meta, and Oracle.</p></div>
+        <div class="metric-card"><h4>02. When did the county know?</h4><p>Pre-solicitation communications between county staff and Rayonier, CBRE, or the buyer are public records under Chapter 119. If those communications predate the FDACS grant application, the grant was obtained for a project whose actual demand driver was a private hyperscale deal.</p></div>
+      </div>
+      <div class="metric-row">
+        <div class="metric-card"><h4>03. The grant application</h4><p>FDACS Grant No. 32780 includes a demand justification section. If the stated justification cites population growth rather than industrial development, that document is material to understanding how the upgrade was framed to state agencies.</p></div>
+        <div class="metric-card"><h4>04. BOCC conflict checks</h4><p>Christopher Corr, who runs Raydient LLC and has a background in Florida House politics, the UF Board of Trustees, and the Florida Council of 100, has access to Northeast Florida political networks that overlap with the BOCC.</p></div>
+      </div>
+      <div class="metric-row">
+        <div class="metric-card"><h4>05. The water calculation</h4><p>The 0.15 MGD expansion under RFQ 26-02 is smaller than the estimated 300,000-600,000 gallons per day the data center would return to the plant as non-evaporated discharge. Either the reclaimed water model is designed differently than standard evaporative cooling suggests, or further expansion is already planned.</p></div>
+      </div>
+
+      <h2>What you can do</h2>
+
+      <p>This investigation depends on public records, and public records depend on people asking for them. Under Florida's Government in the Sunshine Law (Chapter 119), any person has the right to inspect and copy public records held by any government agency. No reason is required. The agency cannot legally honor an NDA or confidentiality agreement that would block disclosure of records generated in the course of public business.</p>
+
+      <p>The following records are available by request and are central to this investigation:</p>
+
+      <div class="metric-row">
+        <div class="metric-card"><h4>BOCC Communications</h4><p>All communications between Putnam County officials and any representative of Rayonier, Raydient, or CBRE regarding the Gilbert Road parcels or the WWTF upgrade.<br><em style="font-size:0.8rem;color:var(--teal-700);">Request to: Putnam County BOCC, Public Records Custodian, 2509 Crill Avenue, Palatka, FL 32177</em></p></div>
+        <div class="metric-card"><h4>FDACS Grant Records</h4><p>FDACS Grant Agreement No. 32780 and the original grant application.<br><em style="font-size:0.8rem;color:var(--teal-700);">Request to: Florida DACS, Office of the General Counsel, 600 South Calhoun Street, Tallahassee, FL 32399</em></p></div>
+      </div>
+      <div class="metric-row">
+        <div class="metric-card"><h4>Senate Funding Request</h4><p>FL Senate Local Funding Initiative Request S2558 and all supporting materials.<br><em style="font-size:0.8rem;color:var(--teal-700);">Available at: <a href="https://www.flsenate.gov/PublishedContent/Session/FiscalYear/FY2025-26/LocalFundingInitiativeRequests/FY2025-26_S2558.pdf" style="color:var(--teal-600);">flsenate.gov</a></em></p></div>
+        <div class="metric-card"><h4>Easement Negotiations</h4><p>All water and sewer easement negotiation records between the county and any party related to the Gilbert Road site.<br><em style="font-size:0.8rem;color:var(--teal-700);">Request to: Putnam County BOCC, same address above</em></p></div>
+      </div>
+
+      <p>If you have information about this project, including any communications, documents, or firsthand knowledge of the entitlement process, contact Lucid Era Investigations at the address below. Source confidentiality is protected.</p>
+
+      <div class="methodology-note">
+        <strong>Methodology and sourcing.</strong> This report is based on the CBRE Data Center Solutions marketing brochure, Putnam County procurement records (Bid 26-05 specifications, Putnam County Project Updates January 2026), Florida Senate Local Funding Initiative Request FY2025-26 S2558, Rayonier Inc. SEC filings, Florida Trend and Florida 500 profiles of Christopher Corr, and public academic and legal analysis of data center water infrastructure patterns. All factual claims are tagged as Verified (primary source documentation), Reported (credible news coverage), or Inferred (logical conclusion from verified facts not independently confirmed). Inferred findings are marked as such in the text. All source documents are archived in the Lucid Era Investigations vault. This report will be updated as new records are obtained.
+        <br><br>
+        <strong>Lucid Era Investigations</strong> is the accountability journalism arm of Lucid Era Media, Palatka, FL. Contact: <a href="https://lucideragroup.com" style="color:var(--teal-600);">lucideragroup.com</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER — if you change this, update it in ALL pages -->
+<footer class="site-footer">
+  <div class="footer-logo">
+    <img src="assets/images/lucid-era-investigations-logo.png" alt="Lucid Era Investigations logo" width="48" height="48">
+  </div>
+  <div class="footer-name">Lucid Era Investigations</div>
+  <div class="footer-tagline">Truth. Accountability. Community.<br>Palatka, Florida</div>
+  <nav class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="media.html">Media</a>
+    <a href="investigations.html">Investigations</a>
+    <a href="technologies.html">Technologies</a>
+    <a href="about.html">About</a>
+  </nav>
+  <div class="footer-legal">&copy; 2026 Lucid Era Group. All rights reserved.</div>
+</footer>
+
+<script>
+const TEAL='#1D9E75',AMBER='#EF9F27',CORAL='#D85A30',SLATE='#243729',LABEL='#B8CEC0',GRID='rgba(93,202,165,0.1)';
+Chart.defaults.color=LABEL;
+Chart.defaults.font.family="'DM Sans',sans-serif";
+Chart.defaults.font.size=12;
+new Chart(document.getElementById('landChart'),{type:'doughnut',data:{labels:['Usable upland (525 ac)','Wetland and buffer (792 ac)'],datasets:[{data:[525,792],backgroundColor:[TEAL,SLATE],borderColor:'#111B17',borderWidth:3,hoverOffset:8}]},options:{responsive:true,maintainAspectRatio:false,cutout:'62%',plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' '+ctx.label}}}}});
+new Chart(document.getElementById('powerChart'),{type:'bar',data:{labels:['Site planned capacity','FPL confirmed available','Power flow study capacity','Putnam residential demand','FPL BESS (2027)'],datasets:[{data:[1700,400,1400,680,200],backgroundColor:[CORAL,TEAL,TEAL,AMBER,SLATE],borderRadius:3,barThickness:32}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+c.parsed.y+' MW'}}},scales:{y:{beginAtZero:true,grid:{color:GRID},ticks:{color:LABEL,callback:v=>v+' MW'}},x:{grid:{display:false},ticks:{color:LABEL,maxRotation:45}}}}});
+new Chart(document.getElementById('jobsChart'),{type:'bar',data:{labels:['Construction (temporary)','Permanent staff'],datasets:[{data:[850,45],backgroundColor:[AMBER,TEAL],borderRadius:3,barThickness:28}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>' '+c.parsed.x+' workers'}}},scales:{x:{beginAtZero:true,grid:{color:GRID},ticks:{color:LABEL}},y:{grid:{display:false},ticks:{color:LABEL}}}}});
+</script>
+
+</body>
+</html>
