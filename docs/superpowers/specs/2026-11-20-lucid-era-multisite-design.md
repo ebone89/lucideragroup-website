@@ -93,7 +93,7 @@ Accent: coral (current tech accent). Tone: neutral, professional, nonpartisan.
   - Campaign and election security (account security, phishing defense, device hardening for campaign staff and committees; framed in a nonpartisan way)
   - Deepfake and manipulated media analysis
   - Digital literacy workshops and training
-- `contact.html`: email and Signal, what to include in a first message, service area (Putnam County and Northeast Florida, remote work available).
+- `contact.html`: email (`ethan@lucideragroup.com`), what to include in a first message, service area (Putnam County and Northeast Florida, remote work available).
 - Footer: "A Lucid Era Group company" linking to the hub only.
 
 ### 3. Strategies (`sites/strategies/`)
@@ -108,7 +108,7 @@ Accent: amber or a new distinct color (builder's call within the existing token 
   - Voter file and targeting data
   - Campaign strategy and political consulting
   - Opposition and background research (public records based, documented sourcing)
-- `contact.html`: email and Signal. Note confidentiality of client engagements.
+- `contact.html`: email (`ethan@lucideragroup.com`). Note confidentiality of client engagements.
 - Footer: "A Lucid Era Group company" linking to the hub only.
 
 ### 4. Newsroom (`sites/newsroom/`)
