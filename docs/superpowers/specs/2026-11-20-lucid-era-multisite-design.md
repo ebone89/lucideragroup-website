@@ -43,7 +43,8 @@ These audiences must not bleed into each other. A church looking for IT help sho
 - Plain static HTML and CSS, no build step, no framework. Works on any static host (GitHub Pages, Cloudflare Pages, Netlify).
 - All paths relative within each site folder.
 - Keep the existing visual language: DM Serif Display and DM Sans, dark slate nav and footer, existing token palette in `assets/css/styles.css`. Each site gets its own accent color.
-- Existing contact points: `Contact.LucidEra@protonmail.com`, `Tips.Lucid-Era@protonmail.com`, Signal `ecb.77`.
+- Contact: `ethan@lucideragroup.com` is the single email on every site (owner decision). The old ProtonMail addresses are retired from the new sites. Signal `ecb.77` appears only on the newsroom site, as the secure channel for tips; Technologies and Strategies list email only.
+- Hub domain: `https://lucideragroup.com`. Every branch footer links to it with that absolute URL so it keeps working after a folder moves to its own domain.
 - Mobile friendly: the current nav has no mobile handling; each site needs a nav that wraps cleanly at phone width without JavaScript.
 
 ## Approaches considered
@@ -66,16 +67,16 @@ sites/
 
 Each site folder contains its own `index.html`, other pages, `assets/css/styles.css`, and `assets/images/` with only the logos it uses.
 
-The current root-level files (`index.html`, `about.html`, etc. and root `assets/`) are removed once their content has moved into `sites/`. A short root `README.md` explains the folder layout and how to point each folder at a domain.
+The current root-level files (`index.html`, `about.html`, etc. and root `assets/`) stay in place untouched until the owner has set up domains for the new sites, so merging this work cannot take down the live site or break links to the East Palatka article. Removing them is a later, separate step. A short root `README.md` explains the folder layout and how to point each folder at a domain.
 
 ### 1. Group hub (`sites/group/`)
 
 Accent: teal (current group palette).
 
-- `index.html`: hero with group logo and a one-paragraph mission. One card per branch (Technologies, Strategies, Investigations and Media) with a short description and an outbound link. A short "How we keep our work separate" section explaining that each company runs independently, the newsroom never covers paid clients of Strategies, and each site has its own contact.
+- `index.html`: hero with group logo and a one-paragraph mission. One card per branch (Technologies, Strategies, Investigations and Media) with a short description and an outbound link. A short "How we keep our work separate" section explaining that each company runs independently, the newsroom never covers anyone who is a client of any Lucid Era company, and each site has its own contact.
 - `about.html`: who runs the group (Ethan Bradley, based in Palatka, Florida), what each branch does, and the separation policy in more detail.
 
-Branch links on the hub point to relative paths for now (`../technologies/index.html`) and are clearly marked in a comment as the place to swap in real domains.
+Branch links on the hub point to relative paths for now (`../technologies/index.html`) and are clearly marked in a comment as the place to swap in real domains. Branch sites link back to the hub at `https://lucideragroup.com`.
 
 ### 2. Technologies (`sites/technologies/`)
 
@@ -121,7 +122,7 @@ Voice: openly progressive. People-first populism, workers' rights, environmental
 - `east-palatka-data-center.html`: the existing article moved as is, with nav, footer, and asset paths updated.
 - `media.html`: podcast and video production, commentary. No episodes exist yet, so this page describes the show and says episodes are coming, with no fake content.
 - `stand.html` ("What we stand for"): the editorial platform. Populist and progressive values listed above, plus the tech policy positions: privacy rights, right to repair and digital ownership, tech regulation that makes technology safer and more beneficial for everyone, fiber internet for everyone, access to technology, and responsible use of technology.
-- `standards.html` ("Standards and disclosure"): the current About principles (public sources, show your work, no advertising, community first), reporting versus commentary labeling, corrections policy, and the client firewall: "Lucid Era Media does not report on paid clients of Lucid Era Strategies. Where any connection to a subject exists, we disclose it." Also who runs it and contact and tips.
+- `standards.html` ("Standards and disclosure"): the current About principles (public sources, show your work, no advertising, community first), reporting versus commentary labeling, corrections policy, and the client firewall: "Lucid Era Media does not report on anyone who is a client of Lucid Era Group, including clients of Lucid Era Technologies and Lucid Era Strategies. Where any connection to a subject exists, we disclose it." Also who runs it and contact and tips.
 - Footer: "A Lucid Era Group company" linking to the hub only.
 
 The current `about.html` mislabels Investigations as "Lucid Era Media" in places; its content is merged into `standards.html` with consistent naming, so the problem goes away.
@@ -140,6 +141,8 @@ The current `about.html` mislabels Investigations as "Lucid Era Media" in places
 - A.C.T. League removed entirely.
 - Openly progressive newsroom with the values listed above.
 - All additional services and pages proposed in conversation are included.
+- The client firewall covers anyone the owner works with directly as a client, across every branch.
+- One email for everything: `ethan@lucideragroup.com`.
 
 ## Calls made by Claude (owner can override)
 
@@ -147,7 +150,9 @@ The current `about.html` mislabels Investigations as "Lucid Era Media" in places
 - Investigations and Media combined into one newsroom site.
 - Tech policy positions live on the newsroom "What we stand for" page.
 - Plain HTML, one folder per site in this repo.
-- Contact for Technologies and Strategies uses the existing general ProtonMail address until the owner provides branch-specific ones.
+- Signal kept only on the newsroom site for secure tips, since it protects sources better than email.
+- The owner's full name appears on the hub and newsroom only. Technologies and Strategies show no personal name beyond the shared email address.
+- Root-level legacy pages stay until domains are live.
 
 ## Left to the builder
 
