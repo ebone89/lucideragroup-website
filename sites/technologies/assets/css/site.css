@@ -4,6 +4,7 @@
 /* File tree: mono list with literal box-drawing glyphs in the markup so it copies cleanly.
    Each entry is a two-column grid row: glyph cell, then link (and optional description row). */
 .tree{list-style:none;font-family:'IBM Plex Mono',monospace;font-size:14px;line-height:1.5;color:var(--dim);background:var(--ink);border:1px solid var(--slate-2);border-left:3px solid var(--accent);padding:16px 18px}
+.tree li.root{display:block}
 .tree .root{color:var(--mist);margin-bottom:2px;overflow-wrap:anywhere}
 .tree li{display:grid;grid-template-columns:4ch 1fr;column-gap:1ch;white-space:pre}
 .tree .g{color:var(--mist)}

@@ -65,6 +65,7 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;background:rep
 
 /* Typed memo on paper */
 .memo{margin-top:30px;background:var(--paper);color:var(--ink);padding:22px 26px;font-family:'Special Elite',monospace;font-size:15px;line-height:1.7;border-left:6px solid var(--stamp);max-width:760px}
+.memo a{color:var(--stamp);text-decoration:underline;text-underline-offset:3px}
 .memo strong{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;display:block;margin-bottom:6px;color:var(--stamp)}
 
 /* Manila case folder with tab and rubber stamp */

@@ -1,11 +1,8 @@
 /* Lucid Era Group hub: site-only styles. Accent is the logo green. */
 :root{--accent:#36A03E}
 
-/* Mission paragraph spacing in the hero */
-.hero p + p{margin-top:12px}
-
 /* Company cards: keep the description pinned above the action link */
-.card p{min-height:6.5em}
+@media (min-width:681px){.card p{min-height:6.5em}}
 
 /* About page: company blocks */
 .company{margin-bottom:2em}
