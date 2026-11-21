@@ -177,6 +177,13 @@ class CheckSitesTest(unittest.TestCase):
         (self.root / "design" / "base.css").write_text("body{}")
         self.assertRule("reduced-motion")
 
+    def test_absent_site_folder_reports_missing_pages(self):
+        import shutil
+        shutil.rmtree(self.root / "sites" / "group")
+        vs = check_sites.run(self.root)
+        self.assertIn("sites/group/index.html: missing-page: required page not found in sites/group", vs)
+        self.assertEqual(sum("missing-page" in x for x in vs), len(PAGES["group"]))
+
     def test_missing_required_page_flagged(self):
         (self.root / "sites/newsroom/standards.html").unlink()
         self.assertRule("missing-page")

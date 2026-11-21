@@ -105,8 +105,6 @@ def run(root: Path) -> list[str]:
 
     for site, required in REQUIRED_PAGES.items():
         sdir = root / "sites" / site
-        if not sdir.is_dir():
-            continue  # sites are built one task at a time; absent folders are skipped
         titles: dict[str, Path] = {}
 
         # Rule: required pages exist
