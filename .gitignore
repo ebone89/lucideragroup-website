@@ -7,3 +7,6 @@ desktop.ini
 *.swp
 *.swo
 *~
+
+# Python bytecode from tools/
+__pycache__/
