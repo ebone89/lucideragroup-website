@@ -14,7 +14,7 @@
 
 /* Services page: sticky tree sidebar beside the content */
 .svc-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:40px;align-items:start;padding-top:50px}
-.svc-layout .tree{position:sticky;top:20px}
+.svc-layout > nav{position:sticky;top:20px}
 .svc-body section{padding-bottom:34px;margin-bottom:34px;border-bottom:1px dashed var(--slate-2)}
 .svc-body section:last-child{border-bottom:0}
 .svc-body .id{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);letter-spacing:.1em}
@@ -35,6 +35,6 @@
 
 @media(max-width:680px){
   .svc-layout{grid-template-columns:minmax(0,1fr);gap:26px;padding-top:30px}
-  .svc-layout .tree{position:static}
+  .svc-layout > nav{position:static}
   .tree{font-size:13px;padding:14px}
 }
