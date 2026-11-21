@@ -42,7 +42,7 @@ These audiences must not bleed into each other. A church looking for IT help sho
 
 - Plain static HTML and CSS, no build step, no framework. Works on any static host (GitHub Pages, Cloudflare Pages, Netlify).
 - All paths relative within each site folder.
-- Keep the existing visual language: DM Serif Display and DM Sans, dark slate nav and footer, existing token palette in `assets/css/styles.css`. Each site gets its own accent color.
+- Visual style is defined in the Visual style section below. It replaces the current site's DM Serif and mint teal look.
 - Contact: `ethan@lucideragroup.com` is the single email on every site (owner decision). The old ProtonMail addresses are retired from the new sites. Signal `ecb.77` appears only on the newsroom site, as the secure channel for tips; Technologies and Strategies list email only.
 - Hub domain: `https://lucideragroup.com`. Every branch footer links to it with that absolute URL so it keeps working after a folder moves to its own domain.
 - Mobile friendly: the current nav has no mobile handling; each site needs a nav that wraps cleanly at phone width without JavaScript.
@@ -126,6 +126,40 @@ Voice: openly progressive. People-first populism, workers' rights, environmental
 - Footer: "A Lucid Era Group company" linking to the hub only.
 
 The current `about.html` mislabels Investigations as "Lucid Era Media" in places; its content is merged into `standards.html` with consistent naming, so the problem goes away.
+
+## Visual style (approved from a throwaway mockup)
+
+Direction: late 1980s and early 1990s hacker terminal crossed with a 1930s detective agency. The owner approved the mockup's overall look, top navigation, and case file treatment.
+
+Palette, sampled from the logo artwork:
+
+| Token | Hex | Use |
+|---|---|---|
+| night | #0E1A1B | page background |
+| ink | #151513 | nav, footer, buttons |
+| slate | #1F3E42 | panels, logo triangle |
+| slate-2 | #2A4C50 | borders |
+| mist | #3F5C5E | dividers, muted shapes |
+| green | #36A03E | rules, accents (logo green) |
+| phosphor | #5BE36B | glowing highlights, links |
+| paper | #E9E1CC | memos |
+| manila | #D8C08A | case folders |
+| stamp | #A3322A | stamps, redaction accents |
+| text | #C9D6D2 | body text on dark |
+| dim | #86A09B | secondary text |
+
+Type: IBM Plex Mono for headings, nav, labels, and buttons (matches the logo lettering). Special Elite (typewriter) for kickers, memos, and case file text. IBM Plex Sans for long body copy so articles stay readable.
+
+Shared elements on every site: terminal style top nav (`LUCID_ERA://site` wordmark, uppercase mono links, `>` prompt on hover), faint CRT scanline overlay, blinking cursor in the hero, `// SECTION` headings with an ASCII `====` rule, dark panel cards with a colored top border, mono `> action_` links.
+
+Per site emphasis:
+
+- **Hub:** as in the mockup. Logo hero, `status --all` readout, numbered company file cards, separation memo.
+- **Technologies:** file tree navigation. Services are presented as a directory listing (for example `/services/managed-it`, `/services/security`) in a sidebar or index block, with tree glyphs (`├──`, `└──`). Clean and calm so it still reads as a trustworthy IT business; no redactions or stamps here.
+- **Strategies:** dossier and data readout feel. Builder's call within the shared style.
+- **Newsroom:** case files plus a declassified document look. Manila folders with case number tabs and rubber stamps (PUBLISHED, UNDER INVESTIGATION), redaction bars, CLASSIFIED or DECLASSIFIED headers, typewriter text. Use only generic wording. Never use the real FBI name, seal, or any government agency insignia; federal law restricts that, and it would read as impersonation.
+
+Logos: a wordless badge (the group logo with the name painted out) is used in navs, footers, and favicons; the worded logos are used in heroes. All logo copies are downscaled for web (originals are 220 to 240 KB). Strategies has no logo yet and uses the wordless badge plus a text wordmark.
 
 ## Shared conventions
 
