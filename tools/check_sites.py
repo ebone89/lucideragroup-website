@@ -134,7 +134,7 @@ def run(root: Path) -> list[str]:
 def check_text(f: Path, site: str, text: str, v):
     """Rules that apply to the raw text of any file."""
     # Dash rule: no em dash (U+2014) or en dash (U+2013)
-    for ch, name in (("—", "em dash"), ("–", "en dash")):
+    for ch, name in (("\u2014", "em dash"), ("\u2013", "en dash")):
         if ch in text:
             line = text[: text.index(ch)].count("\n") + 1
             v(f, "dash", f"{name} on line {line}")

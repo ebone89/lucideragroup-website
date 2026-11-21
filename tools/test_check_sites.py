@@ -65,11 +65,11 @@ class CheckSitesTest(unittest.TestCase):
         self.assertEqual(check_sites.run(self.root), [])
 
     def test_em_dash_flagged(self):
-        self.write("group/about.html", page("About", "<p>a — b</p>", hub=False))
+        self.write("group/about.html", page("About", "<p>a \u2014 b</p>", hub=False))
         self.assertRule("dash")
 
     def test_en_dash_in_css_flagged(self):
-        (self.root / "sites/group/assets/css/site.css").write_text("/* a – b */")
+        (self.root / "sites/group/assets/css/site.css").write_text("/* a \u2013 b */")
         self.assertRule("dash")
 
     def test_branch_cross_link_flagged(self):
