@@ -1,0 +1,45 @@
+/* Lucid Era Strategies: site-only styles. Accent is manila, for the dossier feel. */
+:root{--accent:#D8C08A}
+
+/* Dossier cards: numbered files with a mono readout line */
+.dossiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.dossier{background:linear-gradient(180deg,var(--slate) 0%,#173033 100%);border:1px solid var(--slate-2);border-top:3px solid var(--accent);padding:22px;position:relative}
+.dossier .id{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:.14em}
+.dossier h3{font-family:'IBM Plex Mono',monospace;color:#fff;font-size:18px;margin:8px 0 10px;line-height:1.3}
+.dossier p{font-size:14.5px;color:var(--text);margin-bottom:14px}
+.dossier .ro{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--dim);border-top:1px dashed var(--slate-2);padding-top:10px;overflow-wrap:anywhere}
+.dossier .ro b{color:var(--accent);font-weight:400}
+.dossier a.go:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* Manila readout in the hero */
+.hero .readout{border-left-color:var(--accent);color:var(--accent)}
+.hero .readout b{color:var(--accent)}
+
+/* Who we serve strip */
+.serve{display:flex;flex-wrap:wrap;gap:10px}
+.serve li{list-style:none;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--text);border:1px solid var(--slate-2);border-top:3px solid var(--accent);background:var(--slate);padding:8px 14px}
+
+/* Services page: full-width dossier entries */
+.svc-body{padding-top:30px}
+.svc-body section{padding:26px 0;border-bottom:1px dashed var(--slate-2);scroll-margin-top:20px}
+.svc-body section:last-child{border-bottom:0}
+.svc-body .id{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:.14em}
+.svc-body h2{font-family:'IBM Plex Mono',monospace;color:#fff;font-size:22px;margin:6px 0 12px;line-height:1.25}
+.svc-body p{margin-bottom:1em;max-width:680px}
+.svc-body .ro{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--dim);border-left:2px solid var(--accent);padding-left:12px;max-width:680px;overflow-wrap:anywhere}
+.svc-body .ro b{color:var(--accent);font-weight:400}
+.svc-body :target h2{color:var(--accent)}
+
+/* Contact CTA, page intro, confidentiality note */
+.cta p{max-width:620px;margin-bottom:18px}
+.page-head{padding:50px 0 0}
+.page-head h1{font-family:'IBM Plex Mono',monospace;color:#fff;font-size:clamp(26px,4vw,38px);line-height:1.15;margin:8px 0 14px;overflow-wrap:anywhere}
+.page-head p{max-width:620px}
+.contact-body{padding-top:30px}
+.note{max-width:680px;border:1px solid var(--slate-2);border-left:3px solid var(--accent);background:var(--slate);padding:14px 18px;font-size:14.5px}
+.note .id{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:.14em;display:block;margin-bottom:4px}
+
+@media(max-width:680px){
+  .dossiers{grid-template-columns:minmax(0,1fr)}
+  .svc-body{padding-top:20px}
+}
