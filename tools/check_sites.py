@@ -33,6 +33,9 @@ LOGOS = ["lucid-era-logo-main.png", "lucid-era-detective-mark.png"]
 # File types scanned as text for the content rules
 TEXT_EXT = {".html", ".css", ".js", ".json", ".txt", ".xml", ".svg", ".md"}
 
+# HTML references for em and en dashes: &mdash; &ndash; &#8212; &#8211; (and hex forms)
+DASH_ENTITY = re.compile(r"&(?:mdash|ndash|#8212|#8211|#x2014|#x2013);", re.I)
+
 # Banned terms: (rule detail, compiled pattern, sites it applies to or None for all)
 BANNED = [
     ("protonmail", re.compile(r"protonmail", re.I), None),
@@ -136,6 +139,11 @@ def check_text(f: Path, site: str, text: str, v):
         if ch in text:
             line = text[: text.index(ch)].count("\n") + 1
             v(f, "dash", f"{name} on line {line}")
+    # The same dashes written as HTML character references render identically
+    m = DASH_ENTITY.search(text)
+    if m:
+        line = text[: m.start()].count("\n") + 1
+        v(f, "dash", f"dash entity {m.group(0)} on line {line}")
     # Signal handle only on the newsroom
     if site != "newsroom" and "ecb.77" in text:
         v(f, "signal", "Signal handle ecb.77 outside sites/newsroom")

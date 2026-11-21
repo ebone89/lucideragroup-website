@@ -72,6 +72,15 @@ class CheckSitesTest(unittest.TestCase):
         (self.root / "sites/group/assets/css/site.css").write_text("/* a \u2013 b */")
         self.assertRule("dash")
 
+    def test_dash_entities_flagged(self):
+        # Named and numeric references for em and en dashes are caught too
+        for ent in ("&mdash;", "&ndash;", "&#8212;", "&#8211;"):
+            self.write("group/about.html", page("About", f"<p>a {ent} b</p>", hub=False))
+            self.assertRule("dash")
+        # A plain hyphen and other entities stay clean
+        self.write("group/about.html", page("About", "<p>a - b &amp; c &rarr; d</p>", hub=False))
+        self.assertEqual(check_sites.run(self.root), [])
+
     def test_branch_cross_link_flagged(self):
         self.write("technologies/index.html",
                    page("T", '<a href="../strategies/index.html">x</a>'))
