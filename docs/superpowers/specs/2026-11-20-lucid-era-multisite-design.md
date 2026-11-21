@@ -73,7 +73,7 @@ The current root-level files (`index.html`, `about.html`, etc. and root `assets/
 
 Accent: teal (current group palette).
 
-- `index.html`: hero with group logo and a one-paragraph mission. One card per branch (Technologies, Strategies, Investigations and Media) with a short description and an outbound link. A short "How we keep our work separate" section explaining that each company runs independently, the newsroom never covers anyone who is a client of any Lucid Era company, and each site has its own contact.
+- `index.html`: hero with the main Lucid Era logo and a one-paragraph mission. One card per branch (Technologies, Strategies, Investigations and Media) with a short description and an outbound link. A short "How we keep our work separate" section explaining that each company runs independently, the newsroom never covers anyone who is a client of any Lucid Era company, and each site has its own contact.
 - `about.html`: who runs the group (Ethan Bradley, based in Palatka, Florida), what each branch does, and the separation policy in more detail.
 
 Branch links on the hub point to relative paths for now (`../technologies/index.html`) and are clearly marked in a comment as the place to swap in real domains. Branch sites link back to the hub at `https://lucideragroup.com`.
@@ -98,7 +98,7 @@ Accent: coral (current tech accent). Tone: neutral, professional, nonpartisan.
 
 ### 3. Strategies (`sites/strategies/`)
 
-Accent: amber or a new distinct color (builder's call within the existing token set). No existing logo: use a text wordmark until the owner supplies one.
+Accent: amber or a new distinct color (builder's call within the existing token set). Uses the shared Lucid Era logos like every other site.
 
 - `index.html`: hero, service overview, who it's for (progressive and Democratic campaigns, committees, issue groups, nonprofits), contact call to action.
 - `services.html`:
@@ -137,7 +137,7 @@ Palette, sampled from the logo artwork:
 |---|---|---|
 | night | #0E1A1B | page background |
 | ink | #151513 | nav, footer, buttons |
-| slate | #1F3E42 | panels, logo triangle |
+| slate | #1F3E42 | panels, logo badge fill |
 | slate-2 | #2A4C50 | borders |
 | mist | #3F5C5E | dividers, muted shapes |
 | green | #36A03E | rules, accents (logo green) |
@@ -159,14 +159,17 @@ Per site emphasis:
 - **Strategies:** dossier and data readout feel. Builder's call within the shared style.
 - **Newsroom:** case files plus a declassified document look. Manila folders with case number tabs and rubber stamps (PUBLISHED, UNDER INVESTIGATION), redaction bars, CLASSIFIED or DECLASSIFIED headers, typewriter text. Use only generic wording. Never use the real FBI name, seal, or any government agency insignia; federal law restricts that, and it would read as impersonation.
 
-Logos: a wordless badge (the group logo with the name painted out) is used in navs, footers, and favicons; the worded logos are used in heroes. All logo copies are downscaled for web (originals are 220 to 240 KB). Strategies has no logo yet and uses the wordless badge plus a text wordmark.
+Logos (owner decision, replaces the per-company logos): every site uses the same two marks supplied by the owner.
+- Main logo: the pentagon badge reading "Lucid Era" (`docs/superpowers/specs/assets/lucid-era-logo-main.png`, 500x500 transparent PNG). Used in heroes and on the hub.
+- Detective mark: the detective figure alone (`lucid-era-detective-mark.png`, 500x500 transparent PNG). Used in navs, footers, and favicons.
+- The company name is set in type next to or under the logo (for example the nav wordmark `LUCID_ERA://technologies` and the hero title "Technologies"). No per-company logo images. The old triangle logos are retired from the new sites.
 
 ## Shared conventions
 
 - Each site's stylesheet starts as a copy of the current `styles.css`, trimmed to what that site uses where convenient, plus: a mobile nav rule (links wrap under the brand below about 680px), a services section style, and a CTA block style.
 - Each page keeps the `<!-- NAV -->` and `<!-- FOOTER -->` comments so hand edits stay easy.
 - Every page has a real `<title>` and `<meta name="description">`.
-- Logo PNGs are 220 to 240 KB each, too heavy for a 48px nav icon. The builder may downscale copies for nav and footer use; keep originals for the large hero image.
+- The two owner-supplied logos are 500x500 PNGs: fine for heroes up to about 250px wide. Ask the owner for larger or SVG exports if a bigger hero is wanted.
 
 ## Decided by the owner
 
@@ -191,6 +194,6 @@ Logos: a wordless badge (the group logo with the name painted out) is used in na
 ## Left to the builder
 
 - Exact copy for each section, following the voice rules above.
-- Strategies accent color and text wordmark styling.
+- Strategies accent color.
 - Card and section layouts within the existing visual language.
 - Whether to trim each site's stylesheet.
