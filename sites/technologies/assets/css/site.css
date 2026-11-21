@@ -1,0 +1,40 @@
+/* Lucid Era Technologies: site-only styles. Accent is the logo green. */
+:root{--accent:#36A03E}
+
+/* File tree: mono list with literal box-drawing glyphs in the markup so it copies cleanly.
+   Each entry is a two-column grid row: glyph cell, then link (and optional description row). */
+.tree{list-style:none;font-family:'IBM Plex Mono',monospace;font-size:14px;line-height:1.5;color:var(--dim);background:var(--ink);border:1px solid var(--slate-2);border-left:3px solid var(--accent);padding:16px 18px}
+.tree .root{color:var(--mist);margin-bottom:2px;overflow-wrap:anywhere}
+.tree li{display:grid;grid-template-columns:4ch 1fr;column-gap:1ch;white-space:pre}
+.tree .g{color:var(--mist)}
+.tree a{color:var(--phosphor);white-space:normal;overflow-wrap:anywhere}
+.tree a:hover{text-decoration:underline;text-underline-offset:3px}
+.tree .d{white-space:normal;overflow-wrap:anywhere;font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:var(--text);margin-bottom:10px}
+.tree.compact li{margin-bottom:0}
+
+/* Services page: sticky tree sidebar beside the content */
+.svc-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:40px;align-items:start;padding-top:50px}
+.svc-layout .tree{position:sticky;top:20px}
+.svc-body section{padding-bottom:34px;margin-bottom:34px;border-bottom:1px dashed var(--slate-2)}
+.svc-body section:last-child{border-bottom:0}
+.svc-body .id{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);letter-spacing:.1em}
+.svc-body h2{font-family:'IBM Plex Mono',monospace;color:#fff;font-size:22px;margin:6px 0 12px;line-height:1.25}
+.svc-body p{margin-bottom:1em;max-width:680px}
+.svc-body :target h2{color:var(--phosphor)}
+
+/* Who we serve strip */
+.serve{display:flex;flex-wrap:wrap;gap:10px}
+.serve li{list-style:none;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--text);border:1px solid var(--slate-2);border-top:3px solid var(--accent);background:var(--slate);padding:8px 14px}
+
+/* Contact CTA and page intro */
+.cta p{max-width:620px;margin-bottom:18px}
+.page-head{padding:50px 0 0}
+.page-head h1{font-family:'IBM Plex Mono',monospace;color:#fff;font-size:clamp(26px,4vw,38px);line-height:1.15;margin:8px 0 14px;overflow-wrap:anywhere}
+.page-head p{max-width:620px}
+.contact-body{padding-top:30px}
+
+@media(max-width:680px){
+  .svc-layout{grid-template-columns:minmax(0,1fr);gap:26px;padding-top:30px}
+  .svc-layout .tree{position:static}
+  .tree{font-size:13px;padding:14px}
+}
