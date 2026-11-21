@@ -20,7 +20,7 @@ const { chromium } = require('playwright');
 
 const ROOT = path.resolve(__dirname, '..');
 const SHOT_DIR = process.env.SHOT_DIR ||
-  '/tmp/claude-0/-home-user-lucideragroup-website/939fa1c6-6c96-5e0a-8c85-8a94b5a0ab94/scratchpad/shots';
+  path.join(require('os').tmpdir(), 'lucid-era-shots');
 const VIEWPORTS = [
   { width: 1280, height: 900 },
   { width: 390, height: 844 },

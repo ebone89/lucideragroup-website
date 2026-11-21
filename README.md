@@ -67,4 +67,4 @@ Nothing in a site depends on files outside its own folder.
 
 ## Swapping the hub's branch links
 
-The hub links to the three company sites with relative paths so it works before any domain exists. When the domains are live, edit the three company cards in `sites/group/index.html` (the `<a class="card" href="...">` lines) and replace `../technologies/index.html`, `../strategies/index.html`, and `../newsroom/index.html` with the full URLs. Update any matching links in `sites/group/about.html` and in the footer or nav of the other sites that point back to the hub.
+The hub links to the three company sites with relative paths so it works before any domain exists. When the domains are live, edit the three company cards in `sites/group/index.html` (the `<a class="card" href="...">` lines) and replace `../technologies/index.html`, `../strategies/index.html`, and `../newsroom/index.html` with the full URLs. The branch sites already link to the hub at https://lucideragroup.com and need no change.
