@@ -140,6 +140,14 @@ The hub's cards link to the branch domains from the same hostname map, so swappi
 - `tools/check_sites.py` checks `dist/` after a build instead of `sites/`, with its existing rules, updated for the new hub name, generated pages, and embedded players.
 - A build plus check runs before every commit locally (`npm run check`). Workers Builds runs the build; the check is the owner's and Claude's pre-push gate, not a deploy gate.
 
+### Rollout (owner confirmed: the live site is a Cloudflare Worker connected to this GitHub repo)
+
+The live Worker most likely redeploys whenever `main` changes, so nothing from this work is merged to `main` until cutover.
+1. All work stays on `claude/keen-bell-emsl7a`.
+2. The owner creates a second Worker (name set in `wrangler.jsonc`, e.g. `lucidera-sites`) connected to the same repo with its production branch set to `claude/keen-bell-emsl7a`. It runs on its `*.workers.dev` address for testing, including the admin login.
+3. The Decap backend branch is a config value; during testing it points at `claude/keen-bell-emsl7a`, so CMS saves land on the branch the test Worker deploys.
+4. Cutover: merge to `main`, switch the new Worker's production branch and the Decap branch to `main`, move `lucideragroup.com` from the old Worker to the new one, then disconnect the old Worker. The README lists these steps in order, including checking in the Cloudflare dashboard which branch the old Worker deploys from.
+
 ### Root legacy files
 
 The old root pages (`index.html`, `about.html`, etc.) and the `sites/` folder are removed in this work, because Workers deploys only `dist/` and `src/` replaces `sites/`. The live site is unaffected until the owner switches the domain to the new Worker; the README states that switch step.
@@ -147,7 +155,7 @@ The old root pages (`index.html`, `about.html`, etc.) and the `sites/` folder ar
 ## Decided by the owner
 
 - Option 2: Eleventy build on every publish.
-- Cloudflare hosting, one login for everything.
+- Cloudflare hosting, one login for everything. The current live site is a Cloudflare Worker connected to this repo.
 - Podcast audio hosted externally, embedded on the site.
 - Content types: investigations, commentary (blog), episodes, polling methodology and research papers, service descriptions, page text.
 - Hub named Headquarters; less emphasis on separation messaging on the homepage.
